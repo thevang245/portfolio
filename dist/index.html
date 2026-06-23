@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Trần Thế Vãng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+
+    <style>
+        .glassmorphism {
+            background: rgba(248, 250, 252, 0.45);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .dark .glassmorphism {
+            background: rgba(2, 6, 23, 0.45);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: #3b82f6;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index-BJvzcn6q.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans transition-colors duration-500 dark:bg-slate-950 dark:text-slate-100 antialiased overflow-x-hidden">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="relative z-10 w-full">
+        <nav
+    class="fixed top-0 w-full glassmorphism z-50 px-6 md:px-12 py-4 flex justify-between items-center border-b border-slate-200/50 dark:border-slate-900/50 transition-colors duration-500">
+    <span class="font-bold text-xl tracking-wider text-blue-600 dark:text-blue-400">PORTFOLIO</span>
+
+    <div class="hidden md:flex space-x-8 font-medium">
+        <a href="#home"
+            class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition text-blue-600 dark:text-blue-400">Trang
+            chủ</a>
+        <a href="#about"
+            class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition text-slate-600 dark:text-slate-300">Giới
+            thiệu</a>
+        <a href="#projects"
+            class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition text-slate-600 dark:text-slate-300">Dự
+            án</a>
+        <a href="#contact"
+            class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition text-slate-600 dark:text-slate-300">Liên
+            hệ</a>
+    </div>
+
+    <div class="flex items-center space-x-4">
+        <button id="theme-toggle"
+            class="p-2 rounded-full bg-slate-200/80 hover:bg-slate-300 dark:bg-slate-900 dark:hover:bg-slate-800 transition-colors duration-300 z-50 relative">
+            🌙
+        </button>
+
+        <button id="menu-toggle" class="block md:hidden p-2 text-slate-600 dark:text-slate-300 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu"
+        class="absolute top-full left-0 w-full glassmorphism border-b border-slate-200/50 dark:border-slate-900/50 flex flex-col items-center space-y-4 font-medium transition-all duration-300 overflow-hidden h-0 opacity-0 pointer-events-none py-0">
+        <a href="#home" class="mobile-nav-link text-blue-600 dark:text-blue-400 py-2 w-full text-center">Trang chủ</a>
+        <a href="#about"
+            class="mobile-nav-link text-slate-600 dark:text-slate-300 py-2 w-full text-center hover:text-blue-600">Giới
+            thiệu</a>
+        <a href="#projects"
+            class="mobile-nav-link text-slate-600 dark:text-slate-300 py-2 w-full text-center hover:text-blue-600">Dự
+            án</a>
+        <a href="#contact"
+            class="mobile-nav-link text-slate-600 dark:text-slate-300 py-2 w-full text-center hover:text-blue-600">Liên
+            hệ</a>
+    </div>
+</nav>
+        <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4">
+    <div id="hero-text" class="opacity-0 translate-y-10">
+        <span
+            class="text-sm font-semibold tracking-widest text-blue-600 dark:text-blue-400 uppercase bg-blue-50/80 dark:bg-blue-950/40 px-3 py-1 rounded-full border border-blue-200/30 dark:border-blue-800/30">Welcome
+            to my space</span>
+        <h1 class="text-5xl md:text-7xl font-extrabold mt-4 mb-4 tracking-tight">
+            Hello, mình là <br class="md:hidden"> <span class="text-blue-600 dark:text-blue-400">Vãng</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium h-8">
+            Mình là một <span id="typing" class="text-slate-900 dark:text-white font-bold"></span><span
+                class="cursor">&nbsp;</span>
+        </p>
+        <div class="mt-8">
+            <a href="#projects"
+                class="bg-blue-600 text-white px-8 py-3.5 rounded-full font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-500/20 active:scale-95 inline-block dark:bg-blue-500 dark:hover:bg-blue-600">
+                Xem sản phẩm của mình
+            </a>
+        </div>
+    </div>
+</section>
+        
+        <section id="projects" class="py-24 px-6 md:px-12 max-w-5xl mx-auto bg-transparent">
+    <h2 class="text-3xl font-bold mb-16 text-center">Dự Án Mình Đã Làm</h2>
+
+    <div class="flex flex-col space-y-12 w-full">
+        <!-- Dự án 1 -->
+        <div
+            class="project-card glassmorphism rounded-2xl overflow-hidden shadow-sm border border-slate-200/60 dark:border-slate-900/60 hover:shadow-xl dark:hover:shadow-blue-500/5 transition-all duration-500 group grid grid-cols-1 md:grid-cols-3 items-stretch">
+            <div class="p-8 md:p-10 order-2 md:order-1 md:col-span-2 flex flex-col justify-center">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Flutter •
+                        NodeJS • MongoDB</span>
+                    <span class="text-xs text-slate-400 dark:text-slate-500 font-medium">12/2024 - 02/2025</span>
+                </div>
+                <h3 class="text-2xl font-bold mt-1 mb-3">Ứng Dụng Di Động Tìm Và Quản Lý Phòng Trọ</h3>
+                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                    Hệ thống Fullstack kết nối trực tiếp chủ phòng và người thuê, hỗ trợ thiết kế giao diện chuẩn UI/UX
+                    trên Figma và quản lý dữ liệu hình ảnh, thông báo qua Cloudinary & Firebase.
+                </p>
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 border-t border-slate-100 dark:border-slate-800/60 pt-4">
+                    <div>
+                        <h4
+                            class="text-xs font-bold uppercase text-slate-400 dark:text-slate-500 mb-2 flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Cho Chủ Phòng
+                        </h4>
+                        <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1">
+                            <li>• Quản lý bài đăng (Thêm/Sửa/Xóa)</li>
+                            <li>• Duyệt/từ chối lịch hẹn xem phòng</li>
+                            <li>• Nhận thông báo đặt lịch real-time</li>
+                            <li>• Chat với khách thuê</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4
+                            class="text-xs font-bold uppercase text-slate-400 dark:text-slate-500 mb-2 flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Cho Người Thuê
+                        </h4>
+                        <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1">
+                            <li>• Lọc theo khu vực, giá, diện tích</li>
+                            <li>• Đặt lịch hẹn & bình luận đánh giá</li>
+                            <li>• Đăng nhập Google, OTP bảo mật</li>
+                            <li>• Chat với chủ trọ</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#"
+                    class="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1 w-fit">
+                    Chi tiết dự án <span>&rarr;</span>
+                </a>
+            </div>
+            <div
+                class="bg-slate-200/50 dark:bg-slate-900/50 h-64 md:h-full min-h-[320px] overflow-hidden flex items-center justify-center text-slate-400 dark:text-slate-500 order-1 md:order-2 md:col-span-1 border-b md:border-b-0 md:border-l border-slate-200/60 dark:border-slate-900/60">
+                <span class="group-hover:scale-105 transition-transform duration-500"><img src="/assets/appphongtro-CzfqR2mK.png"
+                        alt="Mockup App" class="w-full h-full object-cover"></span>
+            </div>
+        </div>
+
+        <!-- Dự án 2 -->
+
+    </div>
+</section>
+        <section id="contact" class="py-24 px-6 md:px-12 max-w-4xl mx-auto bg-transparent">
+    <h2 class="text-3xl font-bold mb-4 text-center">Kết Nối Với Mình</h2>
+    <p class="text-slate-600 dark:text-slate-400 text-center mb-12 max-w-md mx-auto text-sm">
+        Bạn có ý tưởng dự án thú vị, muốn hợp tác hay đơn giản là tìm một tâm hồn "cùng tần số"? Đừng ngại để lại lời
+        nhắn nhé! Vì mình cũng có xem được đâu hahaha
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 items-start contact-content">
+        <div class="md:col-span-1 space-y-6">
+            <div
+                class="glassmorphism p-5 rounded-2xl border border-slate-200/60 dark:border-slate-900/60 transition-colors duration-500">
+                <span
+                    class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">Email
+                    cá nhân</span>
+                <a href="mailto:ttv.245@gmail.com"
+                    class="text-sm font-medium hover:underline break-all">ttv.245@gmail.com</a>
+            </div>
+            <div
+                class="glassmorphism p-5 rounded-2xl border border-slate-200/60 dark:border-slate-900/60 transition-colors duration-500">
+                <span
+                    class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">Mạng
+                    xã hội</span>
+                <div class="flex flex-col space-y-3 mt-3 text-sm font-medium">
+                    <a href="https://www.facebook.com/vangx245" target="_blank"
+                        class="flex items-center space-x-3 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition group">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-900 group-hover:bg-blue-50 dark:group-hover:bg-blue-950/50 transition">
+                            <i class="fab fa-facebook-f text-base"></i>
+                        </span>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@vngx245" target="_blank"
+                        class="flex items-center space-x-3 text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white transition group">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-900 group-hover:bg-slate-200 dark:group-hover:bg-slate-800 transition">
+                            <i class="fab fa-tiktok text-base"></i>
+                        </span>
+                        <span>Tiktok</span>
+                    </a>
+                    <a href="https://www.youtube.com/@vangx245" target="_blank"
+                        class="flex items-center space-x-3 text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white transition group">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-900 group-hover:bg-slate-200 dark:group-hover:bg-slate-800 transition">
+                            <i class="fab fa-youtube text-base"></i>
+                        </span>
+                        <span>Youtube</span>
+                    </a>
+                    <a href="https://www.instagram.com/vngx245" target="_blank"
+                        class="flex items-center space-x-3 text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white transition group">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-900 group-hover:bg-slate-200 dark:group-hover:bg-slate-800 transition">
+                            <i class="fab fa-instagram text-base"></i>
+                        </span>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.threads.com/vngx245" target="_blank"
+                        class="flex items-center space-x-3 text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white transition group">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-900 group-hover:bg-slate-200 dark:group-hover:bg-slate-800 transition">
+                            <i class="fab fa-threads text-base"></i>
+                        </span>
+                        <span>Threads</span>
+                    </a>
+                    <a href="https://www.x.com/vangx245" target="_blank"
+                        class="flex items-center space-x-3 text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white transition group">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-900 group-hover:bg-slate-200 dark:group-hover:bg-slate-800 transition">
+                            <i class="fab fa-x text-base"></i>
+                        </span>
+                        <span>X(Twitter)</span>
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <form
+            class="md:col-span-2 glassmorphism p-8 rounded-2xl border border-slate-200/60 dark:border-slate-900/60 space-y-5 transition-colors duration-500">
+            <div>
+                <label
+                    class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Họ
+                    và tên</label>
+                <input type="text" placeholder="Nguyễn Văn A"
+                    class="w-full bg-slate-100/60 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 transition">
+            </div>
+            <div>
+                <label
+                    class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Địa
+                    chỉ Email</label>
+                <input type="email" placeholder="name@example.com"
+                    class="w-full bg-slate-100/60 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 transition">
+            </div>
+            <div>
+                <label
+                    class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Lời
+                    nhắn</label>
+                <textarea rows="4" placeholder="Để lại lời nhắn cho mình tại đây..."
+                    class="w-full bg-slate-100/60 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 transition resize-none"></textarea>
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600 transition font-medium py-3 rounded-xl text-sm shadow-md active:scale-[0.98]">
+                Gửi lời nhắn
+            </button>
+        </form>
+    </div>
+</section>
+    </div>
+
+</body>
+</html>

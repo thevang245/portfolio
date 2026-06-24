@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Trần Thế Vãng</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -15,40 +16,6 @@
             darkMode: 'class',
         }
     </script>
-
-    <style>
-        .glassmorphism {
-            background: rgba(248, 250, 252, 0.45);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-        }
-
-        .dark .glassmorphism {
-            background: rgba(2, 6, 23, 0.45);
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 3px;
-            background-color: #3b82f6;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        #bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans transition-colors duration-500 dark:bg-slate-950 dark:text-slate-100 antialiased overflow-x-hidden">
 

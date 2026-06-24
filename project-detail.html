@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi tiết dự án - App Quản Lý Phòng Trọ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
@@ -15,27 +16,6 @@
         }
     </script>
 
-    <style>
-        .glassmorphism {
-            background: rgba(248, 250, 252, 0.45);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-        }
-
-        .dark .glassmorphism {
-            background: rgba(2, 6, 23, 0.45);
-        }
-
-        #bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-    </style>
 </head>
 
 <body
@@ -172,72 +152,106 @@
         <section class="glassmorphism p-6 md:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-900/60"
             id="detail-gallery">
             <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
-                <i class="fas fa-images text-blue-500"></i> Giao Diện Thực Tế Ứng Dụng
+                Giao Diện Thực Tế Ứng Dụng
             </h3>
 
-            <div
-                class="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800">
+            <div class="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory hide-scrollbar">
 
                 <div
-                    class="group bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
-                    <img src="./appphongtro.png" alt="Màn hình tìm kiếm"
+                    class="group relative bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
+                    <img src="/asset/imgchutro1.png" alt="Màn hình tìm kiếm"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
+                        <h4 class="text-white text-sm font-semibold">
+                            Trang chủ chủ trọ
+                        </h4>
+                    </div>
                 </div>
 
                 <div
-                    class="group bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
-                    <img src="./appphongtro.png" alt="Màn hình nhắn tin"
+                    class="group relative bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
+                    <img src="/asset/imgchutro2.png" alt="Màn hình tìm kiếm"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
+                        <h4 class="text-white text-sm font-semibold">
+                            Đăng tin cho thuê
+                        </h4>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
+                    <img src="/asset/imgchutro3.png" alt="Màn hình tìm kiếm"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
+                        <h4 class="text-white text-sm font-semibold">
+                            Xác nhận đặt lịch
+                        </h4>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
+                    <img src="/asset/imgchutro4.png" alt="Màn hình tìm kiếm"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
+                        <h4 class="text-white text-sm font-semibold">
+                            Phản hồi đánh giá
+                        </h4>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
+                    <img src="/asset/imgkhach1.png" alt="Màn hình tìm kiếm"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
+                        <h4 class="text-white text-sm font-semibold">
+                            Trang chủ khách thuê
+                        </h4>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
+                    <img src="/asset/imgkhach2.png" alt="Màn hình tìm kiếm"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
+                        <h4 class="text-white text-sm font-semibold">
+                            Đặt lịch xem phòng
+                        </h4>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
+                    <img src="/asset/imgkhach3.png" alt="Màn hình tìm kiếm"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
+                        <h4 class="text-white text-sm font-semibold">
+                            Nhận thông báo
+                        </h4>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
+                    <img src="/asset/imgkhach4.png" alt="Màn hình tìm kiếm"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4">
+                        <h4 class="text-white text-sm font-semibold">
+                            Bình luận đánh giá
+                        </h4>
+                    </div>
                 </div>
 
-                <div
-                    class="group bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
-                    <img src="./appphongtro.png" alt="Màn hình nhắn tin"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div
-                    class="group bg-slate-200/50 dark:bg-slate-900/50 aspect-[9/16] w-[75%] sm:w-[45%] md:w-[30%] shrink-0 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-sm snap-center">
-                    <img src="./appphongtro.png" alt="Màn hình nhắn tin"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
 
             </div>
         </section>
     </div>
-
-    <script>
-        // === KHỞI TẠO HIỆU ỨNG GSAP ĐƠN GIẢN ===
-        window.addEventListener('DOMContentLoaded', () => {
-            gsap.from("#detail-header", { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" });
-            gsap.from("#detail-meta", { opacity: 0, y: 20, duration: 0.8, delay: 0.2, ease: "power3.out" });
-            gsap.from("#detail-content", { opacity: 0, y: 20, duration: 0.8, delay: 0.4, ease: "power3.out" });
-            gsap.from("#detail-gallery", { opacity: 0, y: 20, duration: 0.8, delay: 0.6, ease: "power3.out" });
-        });
-
-        // === XỬ LÝ DARK MODE ĐỒNG BỘ ===
-        const toggleBtn = document.getElementById('theme-toggle');
-        function applyTheme() {
-            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-                toggleBtn.innerHTML = '☀️';
-            } else {
-                document.documentElement.classList.remove('dark');
-                toggleBtn.innerHTML = '🌙';
-            }
-        }
-        applyTheme();
-        toggleBtn.addEventListener('click', () => {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                toggleBtn.innerHTML = '🌙';
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                toggleBtn.innerHTML = '☀️';
-            }
-        });
-    </script>
 </body>
+<script src="script.js"></script>
 
 </html>

@@ -234,3 +234,63 @@ if (toggleBtn) {
         }
     });
 }
+
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen = mobileMenu.classList.contains("h-auto");
+
+        if (isOpen) {
+            mobileMenu.classList.remove(
+                "h-auto",
+                "opacity-100",
+                "pointer-events-auto",
+                "py-4"
+            );
+
+            mobileMenu.classList.add(
+                "h-0",
+                "opacity-0",
+                "pointer-events-none",
+                "py-0"
+            );
+
+        } else {
+            mobileMenu.classList.remove(
+                "h-0",
+                "opacity-0",
+                "pointer-events-none",
+                "py-0"
+            );
+
+            mobileMenu.classList.add(
+                "h-auto",
+                "opacity-100",
+                "pointer-events-auto",
+                "py-4"
+            );
+        }
+    });
+}
+const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.remove(
+            "h-auto",
+            "opacity-100",
+            "pointer-events-auto",
+            "py-4"
+        );
+
+        mobileMenu.classList.add(
+            "h-0",
+            "opacity-0",
+            "pointer-events-none",
+            "py-0"
+        );
+    });
+});

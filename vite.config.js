@@ -20,7 +20,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        detail: resolve(__dirname, 'project-detail.html')
+        detail: resolve(__dirname, 'project-detail.html'),
+        detail2: resolve(__dirname, 'project2-detail.html')
       }
     }
   }
